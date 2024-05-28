@@ -9,13 +9,14 @@ void main() {
     theme: ThemeData(
       colorScheme: ColorScheme.fromSwatch().copyWith(
         primary: Color(0xFF5B21B6),
-        secondary: Color(0xFF03DAC5),
+        secondary: Color(0xFFFFFFFF),
         surface: Color(0xFFFFFFFF),
         onPrimary: Colors.white,
       ),
       scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       appBarTheme: AppBarTheme(
         color: Color(0xFF5B21B6),
+        backgroundColor: Colors.yellow
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(foregroundColor: Color(0xFF5B21B6)),
@@ -48,7 +49,10 @@ class StudentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Course Management App'),
+          title: Text('Course Management App', style: TextStyle(
+              color: Colors.white
+          ),),
+          backgroundColor: Color(0xFF5B21B6),
         actions: [
           TextButton(
             onPressed: () {

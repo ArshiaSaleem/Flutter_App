@@ -10,7 +10,12 @@ class CourseManagementApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Course Management App'),
+          backgroundColor: Color(0xFF5B21B6),
+          title: Text('Course Management App', style: TextStyle(
+            color: Colors.white
+          ),),
+
+
         ),
         body: LoginScreen(),
       ),

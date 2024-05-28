@@ -42,6 +42,7 @@ class PeerReviewsDialog extends StatelessWidget {
             SizedBox(height: 10),
             ...reviews.map((review) {
               return Card(
+                color: Color(0xFFF3F4F6),  // Set the card background color
                 margin: EdgeInsets.symmetric(vertical: 5),
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),

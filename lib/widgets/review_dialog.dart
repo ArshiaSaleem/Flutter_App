@@ -12,52 +12,53 @@ class _ReviewDialogState extends State<ReviewDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Expanded(
-            child: Text(
-              'Review for Submission',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          ),
-          IconButton(
-            icon: Icon(Icons.close),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      ),
-      content: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
+        backgroundColor: Color(0xFFF3F4F6), // Set background color of the dialog
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Comments:'),
-            SizedBox(height: 8),
-            TextField(
-              controller: _commentsController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter your comments here...',
+            Expanded(
+              child: Text(
+                'Review for Submission',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              maxLines: 3,
             ),
-            SizedBox(height: 16),
-            Text('Marks:'),
-            SizedBox(height: 8),
-            TextField(
-              controller: _marksController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter mark from 1 to 10',
-              ),
-              keyboardType: TextInputType.number,
+            IconButton(
+              icon: Icon(Icons.close),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
             ),
           ],
         ),
-      ),
+        content: SingleChildScrollView(
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+        Text('Comments:'),
+    SizedBox(height: 8),
+    TextField(
+    controller: _commentsController,
+    decoration: InputDecoration(
+    border: OutlineInputBorder(),
+    hintText: 'Enter your comments here...',
+    ),
+    maxLines: 3,
+    ),
+    SizedBox(height:             16),
+          Text('Marks:'),
+          SizedBox(height: 8),
+          TextField(
+            controller: _marksController,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'Enter mark from 1 to 10',
+            ),
+            keyboardType: TextInputType.number,
+          ),
+        ],
+        ),
+        ),
       actions: [
         ElevatedButton(
           onPressed: () {
@@ -66,8 +67,8 @@ class _ReviewDialogState extends State<ReviewDialog> {
           },
           child: Text('Save Review'),
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.purple,
-            foregroundColor: Colors.white,
+            backgroundColor: Color(0xFF5B21B6), // Set button background color
+            foregroundColor: Colors.white, // Set button text color
           ),
         ),
       ],

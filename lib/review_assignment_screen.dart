@@ -11,7 +11,9 @@ class ReviewAssignmentScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Review Your Peer\'s Assignment'),
-        backgroundColor: Colors.purple,
+        backgroundColor: Color(0xFF5B21B6),
+        foregroundColor: Colors.white,
+
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -65,7 +67,7 @@ class ReviewFileCard extends StatelessWidget {
               },
               child: Text('Add Your Review'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple,
+                backgroundColor: Color(0xFF5B21B6),
                 foregroundColor: Colors.white,
               ),
             ),
